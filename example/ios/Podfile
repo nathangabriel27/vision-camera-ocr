@@ -17,7 +17,8 @@ prepare_react_native_project!
 #   dependencies: {
 #     ...(process.env.NO_FLIPPER ? { 'react-native-flipper': { platforms: { ios: null } } } : {}),
 # ```
-flipper_config = ENV['NO_FLIPPER'] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
+flipper_config = FlipperConfiguration.disabled
+#flipper_config = ENV['NO_FLIPPER'] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
 
 linkage = ENV['USE_FRAMEWORKS']
 if linkage != nil
@@ -46,8 +47,6 @@ target 'VisionCameraOcrExample' do
   )
 
   pod 'VisionCameraOcr', :path => '../..'
-  # pod 'vision-camera-ocr', :path => '../..'
-
   
   target 'VisionCameraOcrExampleTests' do
     inherit! :complete
