@@ -11,7 +11,7 @@
 
 + (void)load
 {
-    // vision @3.9.0
+    // vision @4.1.0
     [FrameProcessorPluginRegistry addFrameProcessorPlugin:@"scanOCR" withInitializer:^FrameProcessorPlugin * _Nonnull(VisionCameraProxyHolder * _Nonnull proxy, NSDictionary * _Nullable options) {
         return [[OCRFrameProcessorPlugin alloc] initWithProxy:proxy withOptions:options];
     }];
