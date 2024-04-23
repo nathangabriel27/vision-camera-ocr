@@ -146,7 +146,8 @@
           val mediaImage: Image? = frame.image
 
           if (mediaImage != null) {
-              val image = InputImage.fromMediaImage(mediaImage, frame.orientation.toSurfaceRotation())
+
+              val image = InputImage.fromMediaImage(mediaImage, frame.imageProxy.imageInfo.rotationDegrees)
               val task: Task<Text> = recognizer.process(image)
               try {
                   val text: Text = Tasks.await(task)
@@ -175,57 +176,6 @@
                           }
                       }
                   }
- //                 val MANUAL_TESTING_LOG = "MANUAL_TESTING_LOG"
- //                 Log.v(MANUAL_TESTING_LOG, "Detected text has : " + text.textBlocks.size + " blocks")
- //                 for (i in text.textBlocks.indices) {
- //                     val lines = text.textBlocks[i].lines
- //                     Log.v(
- //                             MANUAL_TESTING_LOG,
- //                             String.format("Detected text block %d has %d lines", i, lines.size)
- //                     )
- //                     for (j in lines.indices) {
- //                         val elements = lines[j].elements
- //                         Log.v(
- //                                 MANUAL_TESTING_LOG,
- //                                 String.format("Detected text line %d has %d elements", j, elements.size)
- //                         )
- //                         for (k in elements.indices) {
- //                             val element = elements[k]
- //                             Log.v(
- //                                     MANUAL_TESTING_LOG,
- //                                     String.format("Detected text element %d says: %s", k, element.text)
- //                             )
- //                             Log.v(
- //                                     MANUAL_TESTING_LOG,
- //                                     String.format(
- //                                             "Detected text element %d has a bounding box: %s",
- //                                             k,
- //                                             element.boundingBox!!.flattenToString()
- //                                     )
- //                             )
- //                             Log.v(
- //                                     MANUAL_TESTING_LOG,
- //                                     String.format(
- //                                             "Expected corner point size is 4, get %d",
- //                                             element.cornerPoints!!.size
- //                                     )
- //                             )
- //
- //                             for (point in element.cornerPoints!!) {
- //                                 Log.v(
- //                                         MANUAL_TESTING_LOG,
- //                                         String.format(
- //                                                 "Corner point for element %d is located at: x - %d, y = %d",
- //                                                 k,
- //                                                 point.x,
- //                                                 point.y
- //
- //                                         )
- //                                 )
- //                             }
- //                         }
- //                     }
- //                 }
               }
           }
       }
