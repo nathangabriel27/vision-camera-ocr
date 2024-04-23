@@ -436,7 +436,7 @@ PODS:
   - React-jsinspector (0.72.5)
   - React-logger (0.72.5):
     - glog
-  - react-native-worklets-core (0.3.0):
+  - react-native-worklets-core (1.1.1):
     - React
     - React-callinvoker
     - React-Core
@@ -551,12 +551,19 @@ PODS:
     - React-logger (= 0.72.5)
     - React-perflogger (= 0.72.5)
   - SocketRocket (0.6.1)
-  - VisionCamera (3.9.0):
+  - VisionCamera (4.0.1):
+    - VisionCamera/Core (= 4.0.1)
+    - VisionCamera/FrameProcessors (= 4.0.1)
+    - VisionCamera/React (= 4.0.1)
+  - VisionCamera/Core (4.0.1)
+  - VisionCamera/FrameProcessors (4.0.1):
     - React
     - React-callinvoker
-    - React-Core
     - react-native-worklets-core
-  - VisionCameraOcr (2.2.4):
+  - VisionCamera/React (4.0.1):
+    - React-Core
+    - VisionCamera/FrameProcessors
+  - VisionCameraOcr (2.3.1):
     - GoogleMLKit/TextRecognition (= 3.1.0)
     - React-Core
   - Yoga (1.14.0)
@@ -797,7 +804,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: ff70a72027dea5cc7d71cfcc6fad7f599f63987a
   React-jsinspector: aef73cbd43b70675f572214d10fa438c89bf11ba
   React-logger: 2e4aee3e11b3ec4fa6cfd8004610bbb3b8d6cca4
-  react-native-worklets-core: a894d572639fcf37c6d284cc799882d25d00c93d
+  react-native-worklets-core: ff2156b19b8f4a979fa0db52659e39a755b1454b
   React-NativeModulesApple: 797bc6078d566eef3fb3f74127e6e1d2e945a15f
   React-perflogger: cd8886513f68e1c135a1e79d20575c6489641597
   React-RCTActionSheet: 726d2615ca62a77ce3e2c13d87f65379cdc73498
@@ -816,11 +823,11 @@ SPEC CHECKSUMS:
   React-utils: 7a9918a1ffdd39aba67835d42386f592ea3f8e76
   ReactCommon: 91ece8350ebb3dd2be9cef662abd78b6948233c0
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
-  VisionCamera: 72ec2908dff5de402074d0cfd41932cd33c1fe65
-  VisionCameraOcr: 44ce5f5e3eab297e6d1381ee7fececc5566698ba
+  VisionCamera: 8e00df84a76cf26ca70ecd3b6ed05dc0d3b60beb
+  VisionCameraOcr: 06e12ce73b68b4edbde313ca331cb39af3a0bc62
   Yoga: 86fed2e4d425ee4c6eab3813ba1791101ee153c6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 438b486563f9994466c769b415c116614068f7dc
+PODFILE CHECKSUM: 4abf1c11538c7786a8e65ef27ec375663201b093
 
 COCOAPODS: 1.13.0
